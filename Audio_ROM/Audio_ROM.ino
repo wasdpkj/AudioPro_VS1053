@@ -42,6 +42,7 @@ void setup() {
   Serial.println(F("VS1053 found"));
   // Set volume for left, right channels. lower numbers == louder volume!
   player.setVolume(20, 20);
+  player.GPIO_pinMode(4, OUTPUT);   //Amplifier
 }
 
 uint8_t cache[1024];
@@ -49,6 +50,9 @@ unsigned long cache_num = 0;
 void loop() {
   player.stopPlaying();
   player.softReset();
+
+  player.GPIO_digitalWrite(4, LOW);  //Amplifier ON
+
   delay(1);    while (! player.readyForData());
   playFile(Array, sizeof(Array));
 }
