@@ -1,3 +1,6 @@
+/*
+ * http://wiki.microduino.cn/index.php/Microduino-Module_AudioPro/zh
+ */
 // include SPI, MP3 and SD libraries
 #include <SPI.h>
 #include "Audio.h"

@@ -1,3 +1,6 @@
+/*
+ * http://wiki.microduino.cn/index.php/Microduino-Module_AudioPro/zh
+ */
 #include "file.h"
 #include <avr/pgmspace.h>
 #include <SPI.h>

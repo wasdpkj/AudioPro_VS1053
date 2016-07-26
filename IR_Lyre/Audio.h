@@ -2,7 +2,6 @@
 #include <Adafruit_VS1053.h>
 Adafruit_VS1053 musicPlayer = Adafruit_VS1053(VS_XRESET, VS_XCS, VS_XDCS, VS_DREQ);
 
-
 void midiSetInstrument(uint8_t chan, uint8_t inst) {
   if (chan > 15 || inst > 127) return;  // page 32 has instruments starting with 1 not 0 :(
 
